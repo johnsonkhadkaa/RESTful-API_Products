@@ -1,6 +1,5 @@
 const Product = require('../models/product')
 
-
 const getAlProducts = async(req, res) =>{
 
   const { company,name ,feature ,sort ,select} = req.query
@@ -36,6 +35,7 @@ const getAlProducts = async(req, res) =>{
 
   }
 
+  // Pagination formula
   let page = Number(req.query.page) || 1
   let limit = Number(req.query.limit) || 3
 
